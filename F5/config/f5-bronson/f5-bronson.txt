@@ -1,6 +1,0 @@
-Device Name: adc{3,4}-bip1.hkedcity.net
-Allowed Protocal: https, ssh
-Login Name: bronson.so-a
-Password: aTh-aope4X
-
-Note: need Production VPN connection

@@ -1,0 +1,11 @@
+gitignore
+# Ignore EVERYTHING first
+/*
+
+# Then whitelist (include) specific folder
+!/F5/scripts/
+!/F5/scripts/**   # Include all contents recursively
+
+# Optional: Include root files if needed
+# !/README.md
+# !/package.json

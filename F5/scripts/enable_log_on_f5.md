@@ -6,12 +6,12 @@
 ### Test creating iRules in UAT paritiion using bash and tmsh
 
 1. create the following testing file in windows 
-> file name: test_irule_creation.irule
-> 
-> when HTTP_REQUEST {
->    # Log basic request information
->    log local0. "TEST IRULE: Client [IP::client_addr]:[TCP::client_port] -> [HTTP::host][HTTP::uri]"
-> }
+` file name: test_irule_creation.irule
+` 
+` when HTTP_REQUEST {
+`    # Log basic request information
+`    log local0. "TEST IRULE: Client [IP::client_addr]:[TCP::client_port] -> [HTTP::host][HTTP::uri]"
+` }
 
 1. check if iRule existed
 > tmsh list ltm rule | grep -E "test.irule"

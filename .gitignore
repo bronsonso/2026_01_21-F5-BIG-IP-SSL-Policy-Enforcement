@@ -10,6 +10,8 @@ gitignore
 !/F5/
 !/F5/scripts/
 !/F5/scripts/**   # Include all contents recursively
+!/F5/scripts/iRules/
+!/F5/scripts/iRules/**   # Include all contents recursively
 
 /F5/config/
 /F5/config/**

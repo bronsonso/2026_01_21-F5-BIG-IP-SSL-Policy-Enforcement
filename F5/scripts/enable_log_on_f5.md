@@ -17,7 +17,7 @@
  ```
 
 1. check if iRule existed
-> tmsh list ltm rule | grep -E "test.irule"
+` tmsh list ltm rule | grep -E "test.irule" `
 
 2. transfer file to F5 (using winscp)
   

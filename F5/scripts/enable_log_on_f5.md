@@ -24,22 +24,29 @@ tmsh list ltm rule | grep -E "test.irule"
 2. transfer file to F5 (using winscp)
   
 3. On F5, execute the following command
-> 
-> tmsh create ltm rule /dev/test { rule { [string map {"\n" ""} [exec cat /tmp/test_irule_creation.irule]] } }
+```
+tmsh create ltm rule /dev/test { rule { [string map {"\n" ""} [exec cat /tmp/test_irule_creation.irule]] } }
+```
 
 4. check irule syntax
-> tmsh show ltm rule <irule_ame> syntax-check
-> tmsh show ltm rule <irule_ame> syntax-check detail
+```
+tmsh show ltm rule <irule_ame> syntax-check
+tmsh show ltm rule <irule_ame> syntax-check detail
+```
 
 4. Goto F5 web GUI and see if the new iRule was created
 
 5. Remove the test.irule
-> delete ltm rule test.irule
+```
+delete ltm rule test.irule
+```
 
 ### Update iRule directly in file and upload back to server
 
 1. Backup bigip.conf file in command line.
-> cp /config/bigip.conf /config/bigip.conf.BAK
+```
+cp /config/bigip.conf /config/bigip.conf.BAK
+```
 
 2. Download /config/bigip.conf to your pc.
 
@@ -50,7 +57,11 @@ tmsh list ltm rule | grep -E "test.irule"
 5. Upload bigip.conf file to /config folder.
 
 6. Verify config.
-> tmsh load sys config verify
+```
+tmsh load sys config verify
+```
 
 7. If no error, load config.
-> tmsh load sys config
+```
+tmsh load sys config
+```
